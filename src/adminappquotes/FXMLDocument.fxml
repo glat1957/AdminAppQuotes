@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<SplitPane dividerPositions="0.5" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="350.0" prefWidth="550.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="adminappquotes.FXMLDocumentController">
+  <items>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label layoutX="6.0" layoutY="5.0" text="Create or Remove User:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="username" layoutX="104.0" layoutY="58.0" promptText="Username" />
+            <Text layoutX="17.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Username:" wrappingWidth="82.21875">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Text layoutX="283.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Password:" wrappingWidth="82.21875">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Text>
+            <Button fx:id="createUser" layoutX="95.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleCreateUser" text="Create User">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <CheckBox fx:id="checkBox" layoutX="230.0" layoutY="121.0" mnemonicParsing="false" text="Admin?" />
+            <Button fx:id="removeUser" layoutX="321.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleRemoveUser" text="Remove User">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Button>
+            <Label fx:id="userStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="111.0" layoutY="89.0" prefHeight="20.0" prefWidth="345.0" textFill="RED" />
+            <PasswordField fx:id="password" layoutX="370.0" layoutY="58.0" promptText="Password" />
+         </children></AnchorPane>
+    <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="100.0" prefWidth="160.0">
+         <children>
+            <Label layoutX="6.0" layoutY="5.0" text="Create or Remove Category:">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <TextField fx:id="category" layoutX="178.0" layoutY="56.0" promptText="Category Name">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </TextField>
+            <Button fx:id="createCategory" layoutX="113.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleCreateCategory" text="Create Category">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Button fx:id="removeCategory" layoutX="288.0" layoutY="113.0" mnemonicParsing="false" onAction="#handleRemoveCategory" text="Remove Category">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Button>
+            <Label fx:id="categoryStatus" alignment="CENTER" contentDisplay="CENTER" layoutX="112.0" layoutY="89.0" prefHeight="20.0" prefWidth="326.0" textFill="RED" />
+         </children></AnchorPane>
+  </items>
+</SplitPane>
